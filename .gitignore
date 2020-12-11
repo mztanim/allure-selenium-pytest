@@ -1,0 +1,7 @@
+.git/
+.idea/
+.pytest_cache/
+*.log
+target/
+*/__pycache__/
+*.pyc
