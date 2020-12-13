@@ -18,8 +18,6 @@ def driver_init(request, pytestconfig):
     logger = logging.getLogger(__name__)
     logger.setLevel(logging.DEBUG)
 
-    if not (os.path.exists("../target/logs")):
-        os.makedirs("../target/logs")
     file_name = os.path.join(os.path.dirname(__file__), '..', 'target', 'logs', 'test_log.log')
     formatter = logging.Formatter('%(asctime)12s: %(name)s: %(levelname)s: %(message)s')
 
