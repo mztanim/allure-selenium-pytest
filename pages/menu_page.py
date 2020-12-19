@@ -10,7 +10,7 @@ class MenuBar(BasePage):
     __about_link = By.ID, "aboutDisplayLink"
     __logout_link = By.LINK_TEXT, "Logout"
 
-    __menu_loc = {
+    """__menu_loc = {
         "Admin": {
             "Admin": (By.ID, "menu_admin_viewAdminModule"),
             "User Management": (By.ID, "menu_admin_UserManagement"),
@@ -23,7 +23,7 @@ class MenuBar(BasePage):
         }
 
     }
-
+    """
     __first_level_menu = By.CSS_SELECTOR, ".firstLevelMenu"
     __second_level_menu = By.CSS_SELECTOR, ".firstLevelMenu+ul>li"
     __third_level_menu = By.CSS_SELECTOR, ".firstLevelMenu+ul>li>ul>li"
@@ -37,7 +37,7 @@ class MenuBar(BasePage):
         self._click_element(self.__welcome_text)
         self._click_element(self.__logout_link)
         return BasePage(self.driver).get_url()
-
+    """
     def navigate_to_menu_by_loc(self, menus):  # Admin_User Management_Users
         menus = menus.split("_")  # ["Admin", "User Management", "Users]
 
@@ -51,7 +51,7 @@ class MenuBar(BasePage):
         self._click_element(loc[menus[-1]])
 
         return BasePage(self.driver).get_url()
-
+    """
 
     def navigate_to_menu_by_dynamic_loc(self, menus):
         menus = menus.split(",")
